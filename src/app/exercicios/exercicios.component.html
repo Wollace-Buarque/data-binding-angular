@@ -1,0 +1,70 @@
+<div id="container">
+
+  <p>
+    {{helloWorld}}
+  </p>
+
+  <a [href]="link" target="_blank">
+    YouTube
+  </a>
+
+  <h2>Clique no parágrafo abaixo:</h2>
+
+  <p (click)="changeParagraph()" [style.color]="paragraphColor" [style.backgroundColor]="backgroundColor"
+    [style.userSelect]="'none'">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, commodi eveniet. Eaque doloribus pariatur non
+    nam dignissimos, debitis eligendi ratione dolores, obcaecati voluptatem enim repellendus explicabo sit autem libero
+    harum.
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto excepturi ipsum laborum repudiandae quia neque
+    libero vitae, accusantium adipisci animi! Fugiat, blanditiis. Optio quidem sed dolorem numquam expedita consectetur
+    nostrum.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quasi, nobis expedita deserunt quia quae ratione
+    consectetur non minima cumque, numquam ipsa magni repudiandae officia aliquam accusantium? Voluptatum, veniam totam!
+  </p>
+
+  <h2>Selecione um texto abaixo:</h2>
+
+  <select #select (change)="changeTextToShow(+select.value)">
+    <option value="1">Primeiro texto</option>
+    <option value="2">Segundo texto</option>
+    <option value="3">Terceiro texto</option>
+    <option value="4">Quarto texto</option>
+  </select>
+
+  <p [style.display]="textToShowIndex == 1 ? 'block' : 'none'" [style.color]="'red'">
+    <strong>Primeiro texto:</strong>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, eum magnam! Consequatur ullam illo iusto quis
+    amet reiciendis, minima corrupti ab beatae, alias debitis, expedita tempore soluta maiores! Laboriosam, accusantium.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolore corporis qui voluptatem voluptate ratione ipsum
+    laudantium necessitatibus illo amet, nobis, soluta, eligendi similique. Natus delectus quam similique eligendi
+    voluptas?
+  </p>
+
+  <p [style.display]="textToShowIndex == 2 ? 'block' : 'none'" [style.color]="'blue'">
+    <strong>Segundo texto:</strong>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, eum magnam! Consequatur ullam illo iusto quis
+    amet reiciendis, minima corrupti ab beatae, alias debitis, expedita tempore soluta maiores! Laboriosam, accusantium.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolore corporis qui voluptatem voluptate ratione ipsum
+    laudantium necessitatibus illo amet, nobis, soluta, eligendi similique. Natus delectus quam similique eligendi
+    voluptas?
+  </p>
+
+  <p [style.display]="textToShowIndex == 3 ? 'block' : 'none'" [style.color]="'green'">
+    <strong>Terceiro texto:</strong>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, eum magnam! Consequatur ullam illo iusto quis
+    amet reiciendis, minima corrupti ab beatae, alias debitis, expedita tempore soluta maiores! Laboriosam, accusantium.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolore corporis qui voluptatem voluptate ratione ipsum
+    laudantium necessitatibus illo amet, nobis, soluta, eligendi similique. Natus delectus quam similique eligendi
+    voluptas?
+  </p>
+
+  <p [style.display]="textToShowIndex == 4 ? 'block' : 'none'" [style.color]="'purple'">
+    <strong>Quarto texto:</strong>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, eum magnam! Consequatur ullam illo iusto quis
+    amet reiciendis, minima corrupti ab beatae, alias debitis, expedita tempore soluta maiores! Laboriosam, accusantium.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolore corporis qui voluptatem voluptate ratione ipsum
+    laudantium necessitatibus illo amet, nobis, soluta, eligendi similique. Natus delectus quam similique eligendi
+    voluptas?
+  </p>
+
+</div>
